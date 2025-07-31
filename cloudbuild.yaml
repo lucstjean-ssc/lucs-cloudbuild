@@ -1,0 +1,26 @@
+# Use Google Buildpacks to detect & containerize your Node.js app
+steps:
+ - name: "gcr.io/buildpacks/builder:v1"
+  args:
+   [
+    "-path", ".",
+    "-tag", "gcr.io/$PROJECT_ID/hello-service",
+   ]
+
+# push is implicit when you list images
+images:
+ - "gcr.io/$PROJECT_ID/hello-service"
+
+# Deploy to Cloud Run once the image is built
+- name: "gcr.io/cloud-builders/gcloud"
+ entrypoint: "bash"
+ args:
+  - "-c"
+  - |
+   gcloud run deploy hello-service \
+    --image gcr.io/$PROJECT_ID/hello-service \
+    --region us-central1 \
+    --platform managed \
+    --quiet
+
+timeout: "600s"
