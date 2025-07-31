@@ -22,4 +22,4 @@ images:
 - 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
 # [END cloudbuild_quickstart_build]
 options:
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET # testing
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET # testing1
