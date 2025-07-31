@@ -23,5 +23,5 @@ images:
 # [END cloudbuild_quickstart_build]
 logsBucket: 'gs://lucs-r-and-d-cloudbuild_logs'
 options:
-  #defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET # test1
+  #defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET # test
   logging: GCS_ONLY
