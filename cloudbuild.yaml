@@ -21,6 +21,7 @@ steps:
 images:
 - 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
 # [END cloudbuild_quickstart_build]
+logsBucket: 'gs://lucs-r-and-d-cloudbuild_logs'
 options:
   #defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET # testing2
-  logsBucket: 'gs://lucs-r-and-d-cloudbuild_logs'
+  logging: GCS_ONLY
