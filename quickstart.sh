@@ -12,12 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START cloudbuild_quickstart_build]
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  script: |
-    docker build -t us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1 .
-  automapSubstitutions: true
-images:
-- 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
-# [END cloudbuild_quickstart_build]
+# [START cloudbuild_quickstart_build_sh]
+#!/bin/sh
+echo "Hello, world! The time is $(date)."
+# [END cloudbuild_quickstart_build_sh]
