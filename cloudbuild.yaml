@@ -1,4 +1,6 @@
 steps:
+- options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 # 1) Build your Node.js “Hello World” app into a container
 - name: "gcr.io/buildpacks/builder:v1"
   args:
