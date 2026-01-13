@@ -14,18 +14,18 @@
 
 # [START cloudbuild_quickstart_build]
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  script: |
-    docker build -t northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1 .
-  automapSubstitutions: true
+  - name: "gcr.io/cloud-builders/docker"
+    script: |
+      docker build -t northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1 .
+    automapSubstitutions: true
 images:
-- 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
+  - "northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1"
 # [END cloudbuild_quickstart_build]
 # Use logsBucket to specify your own GCS bucket
-logsBucket: 'gs://lucs-r-and-d-cloudbuild_logs'
+logsBucket: "gs://lucs-r-and-d-cloudbuild_logs"
 options:
   # Uncomment the following option to let GCP create a bucket automatically and comment out the 'logging' setting
   # defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
   # Use the following setting to specify your own GCS bucket (logsBucket)
   logging: GCS_ONLY
-# test1
+# test2
